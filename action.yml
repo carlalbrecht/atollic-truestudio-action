@@ -1,5 +1,8 @@
 name: "Build with Atollic TrueSTUDIO"
 description: "Compile C/C++ STM32 projects"
+branding:
+  icon: "package"
+  color: "blue"
 inputs:
   project:
     description: "List of TrueSTUDIO project paths to compile, relative to the repository root"

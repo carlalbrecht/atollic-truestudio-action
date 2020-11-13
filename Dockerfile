@@ -64,6 +64,10 @@ RUN set -euxo pipefail \
  && printf '#!/bin/sh\ncd ${TRUESTUDIO_LOCATION}/ide\nxvfb-run ./headless.sh "$@"\n' > /usr/bin/headless.sh \
  && chmod a+x /usr/bin/headless.sh
 
+# Copy in GitHub Actions adaptor entrypoint
+COPY entrypoint.sh /entrypoint.sh
+
 # Clean-up
 RUN set -euxo pipefail \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+

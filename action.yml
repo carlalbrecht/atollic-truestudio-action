@@ -1,0 +1,16 @@
+name: "Build with Atollic TrueSTUDIO"
+description: "Compile C/C++ STM32 projects"
+inputs:
+  project:
+    description: "List of TrueSTUDIO project paths to compile, relative to the repository root"
+    required: false
+    default: "./"
+  build:
+    description: "Project name / build configuration regular expressions"
+    required: false
+    default: "all"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  entrypoint: ["/entrypoint.sh"]
+

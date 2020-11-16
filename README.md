@@ -38,9 +38,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./firmware/example-project/Debug
-        asset_name: example-project.hex
-        asset_content_type: binary/octet-stream
+          asset_path: ./firmware/example-project/Debug
+          asset_name: example-project.hex
+          asset_content_type: binary/octet-stream
 ```
 
 Build outputs are located in the same directories as when the project is built through the TrueSTUDIO desktop interface - in a child directory inside the project directory, whose name matches the build configuration used.
